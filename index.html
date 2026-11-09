@@ -368,6 +368,22 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        (function (document) {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+            script.onload = function () {
+                window.voiceflow.chat.load({
+                    verify: { projectID: '6af119bae9f5daa4e7d7681d' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    voice: { url: 'https://runtime-api.voiceflow.com' },
+                    environmentID: 'main',
+                    versionVariant: 'published'
+                });
+            };
+            document.body.appendChild(script);
+        })(document);
+    </script>
 </body>
 
 </html>
